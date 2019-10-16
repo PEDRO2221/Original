@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Pagina Inicial</title>
+	 <style media="screen">
+	body{
+		margin: 0px;
+		padding: 0px;
+	}
+	#fundo{
+		background-color: #e09200;
+		width: 100%;
+		height: 100%;
+	}
+	 #menu{
+	 	width: 100%;
+		 padding: 0;
+		 margin: 0;
+		 margin-top: 0px;
+	 }
+	 #menu li{
+		 list-style: none;
+		 display: inline-block;
+	 }
+	 #menu li a{
+		 text-decoration: none;
+		 color: #563574;
+		 position: relative;
+		 font-size:30px;
+		 font-weight: 800;
+		 font-family: arial;
+		 display: block;
+		 overflow: hidden;
+		 transition: 0.7s all;
+		 padding: 10px 20px;
+		 text-transform: uppercase;
+	 }
+	 #menu li a:before{
+		 content:'';
+		 width: 100%;
+		 position: absolute;
+		 border-bottom: 8px solid;
+		 bottom: 0;
+		 right: 350px;
+		 transition: 0.7s all;
+	 }
+	 #menu li a:hover:before{
+		 right: 0;
+	 }
+	 nav{
+		 position: relative;
+		 background-color: rgba( 0, 0, 0, 0.3);
+		 padding: 10px;
+		 width: 99,8%;
+
+	 }
+	 nav ul{
+		 font-family: sans-serifs;
+		 font-size: 20px;
+		 margin-left: %	 ;
+
+
+	 }
+	 nav ul li{
+
+		 display: inline-block;
+		 margin: 0% 6% -4% 5%;
+		 transition:all 0.75s;
+		 border-radius: 90px
+	 }
+	 nav ul li:hover{
+		 border-radius: 1px;
+		 transition: all 0.75s;
+	 }
+	 nav ul li a{
+		 text-decoration: none;
+		 text-transform: uppercase;
+		 color:white;
+
+	 }
+	 nav ul li:hover a{
+		 text-decoration: underline;
+		 color: black;
+	 }
+	 #loading{
+	 	content: normal;
+	 	box-sizing: border-box;
+		border-radius: 70%;
+		align-content: center;
+		align-items: center;
+		position: absolute;
+		left: 35%;
+		top: 30%;
+	 }
+	 </style>
+	 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	</head>
+	<body id="fundo">
+<div id="loading" style="display: block">
+	<img src="https://media.giphy.com/media/xVBUD7Y02os6Y/giphy.gif" alt="" id="loading">
+</div>
+<div id="conteudo" style="display: none">
+	<nav>
+ 		<ul id="menu">
+ 			<ul >
+ 			<center >
+ 				<li><a href="/index">Inicio</a></li>
+ 				<li><a href="/listar">Receitas</a></li>
+ 				<li><a href="cadastro.html">Cadastro</a></li>
+ 			</center>
+ 			</ul>
+ 		</ul>
+ 		</nav>
+ </div>
+ <div id="conteudo">
+	 <div id = "ultimasreceitas">
+		 <a href=""><div id="comida" class="card recipe-card recipe-card-with-hover  recipe-card-v">
+dsadasdasdasdasdsadasdsadasdas
+		 </div></a>
+
+	 </div>
+ </div>
+	</body>
+	<script type="text/javascript">
+	var i = setInterval(function () {
+
+	clearInterval(i);
+	document.getElementById("loading").style.display = "none";
+	document.getElementById("conteudo").style.display = "inline";
+}, 3000);
+	</script>
+</html>
