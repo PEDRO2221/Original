@@ -18,16 +18,15 @@ public class ControllerIndex {
 	
      @GetMapping("/")
      public ModelAndView ListarHome() {
-    	 ModelAndView modelAndView = new ModelAndView("index");
-    	 
+    	 ModelAndView modelAndView = new ModelAndView("index");   	 
     	 modelAndView.addObject("Monitores", monitor.findAll());
     	 modelAndView.addObject(new Monitores());
     	 return modelAndView;
      }
-     @PostMapping("/monitores")
-     public String salvar(Monitores monitores) {
-    	  monitor.save(monitores);
-    	  return "redirect:/";
+     @GetMapping("/cadastro")
+     public String salvar() {
+
+    	  return "cadastro";
      }
      
      
