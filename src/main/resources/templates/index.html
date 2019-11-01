@@ -8,6 +8,9 @@
 	 #loading{
 	align-items: center;
 	border-radius: 50%;
+	position: absolute;
+	top: 25%;
+	left: 37%;
 	 }
 
 	body{
@@ -21,7 +24,7 @@
 	}
 	.header{
 	  height: 100px;
-	  background: #34495e;
+	  background:white;
 	  padding: 0 20px;
 	  color: #fff;
 	}
@@ -36,7 +39,7 @@
 	  line-height: 100px;
 	}
 	.menu a{
-	  color: #fff;
+	  color: black;
 	  text-transform: uppercase;
 	  text-decoration: none;
 	  padding: 0 10px;
@@ -57,7 +60,7 @@
 	.menu a:hover,
 	.show-menu-btn:hover,
 	.hide-menu-btn:hover{
-	  color: #3498db;
+	  color: black;
 	}
 
 	#chk{
@@ -67,7 +70,7 @@
 	}
 
 
-	@media screen and (max-width:800px) {
+	@media screen and (max-width:40%) {
 	  .show-menu-btn,.hide-menu-btn{
 	    display: block;
 	  }
@@ -118,33 +121,31 @@
 		<div id="loading" style="display: block" align="center">
 			<img src="https://media.giphy.com/media/xVBUD7Y02os6Y/giphy.gif" alt="" id="loading" align="center">
 		</div>
-<div id="conteudo" style="display: none">
-	<div class="header" >
-		<img src="" alt="">
-		<input type="checkbox" id="chk">
-		<label for="chk" class="show-menu-btn">
-			<i class="fas fa-ellipsis-h"></i>
-		</label>
 
 
-
-		<ul class="menu">
-
-			<a href="/index">Inicio</a>
-			<a href="/listar">Receitas</a>
-			<a href="/cadastro">Cadastro</a>
-			<label for="chk" class="hide-menu-btn">
-				<i class="fas fa-times"></i>
+	<div id="conteudo" style="display: none">
+	
+		<div class="header">
+			<img src="logo.png" width="200px" height="100px">
+			<input type="checkbox" id="chk">
+			<label for="chk" class="show-menu-btn">
+				<i class="fas fa-ellipsis-h"></i>
 			</label>
-		</ul>
-	</div>
-	<div class="div_teste">
-	<table  align ="center" width="700px" HEIGHT="500px" BACKGROUND="img_promocao_hora/<?= $parametro['img_centro_antes'] ?>">
-		
-	</table>
-</center>
-</div>
-</div>
+
+
+
+			<ul class="menu">
+
+				<a href="/index">Inicio</a>
+				<a href="/listar">Receitas</a>
+				<a href="cadastro.html">Cadastro</a>
+				<label for="chk" class="hide-menu-btn">
+					<i class="fas fa-times"></i>
+				</label>
+			</ul>
+		</div>
+
+	
 	</body>
 	<script type="text/javascript">
 	var i = setInterval(function () {
@@ -152,6 +153,6 @@
 	clearInterval(i);
 	document.getElementById("loading").style.display = "none";
 	document.getElementById("conteudo").style.display = "block";
-}, 3000);
+}, 100);
 	</script>
 </html>
