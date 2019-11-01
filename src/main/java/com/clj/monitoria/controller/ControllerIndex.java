@@ -8,37 +8,27 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.servlet.ModelAndView;
 
-import com.clj.monitoria.model.Monitores;
-import com.clj.monitoria.repository.Monitor;
+import com.clj.monitoria.model.Comidas;
+import com.clj.monitoria.repository.ComidaBD;
 @Controller
 public class ControllerIndex {
 	@Autowired
-	Monitor monitor;
+	ComidaBD comida;
 	
 	
      @GetMapping("/")
-     public ModelAndView ListarHome() {
-    	 ModelAndView modelAndView = new ModelAndView("index");   	 
-    	 modelAndView.addObject("Monitores", monitor.findAll());
-    	 modelAndView.addObject(new Monitores());
-    	 return modelAndView;
-     }
-     @GetMapping("/cadastro")
-     public String salvar() {
-
-    	  return "cadastro";
-     }
-     
-     
+     public String Home() {
+    	 return "index";
+     }     
      
     @GetMapping("/deletar/{id}")
     public String delete(@PathVariable("id") Long id) {
-    	monitor.deleteById(id);
+    	comida.deleteById(id);
     	return "redirect:/";
      }
     @GetMapping("/editar/{id}")
     public String editar(@PathVariable("id") Long id,Model model) {
-    	model.addAttribute("dados" , monitor.findById(id));
+    	model.addAttribute("Comidas" , comida.findById(id));
     	return "editar";
      }
      

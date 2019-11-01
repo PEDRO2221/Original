@@ -5,13 +5,13 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 
 @Entity
-public class Monitores {
+public class Comidas {
 	@Id
 	@GeneratedValue
     public Long id;
     private String nome;
   	
-  	private String dia;
+  	private double tempo;
 
   	
   	public Long getId() {
@@ -30,12 +30,12 @@ public class Monitores {
 		this.nome = nome;
 	}
 
-	public String getDia() {
-		return dia;
+	public double getTempo() {
+		return tempo;
 	}
 
-	public void setDia(String dia) {
-		this.dia = dia;
+	public void setTempo(double tempo) {
+		this.tempo = tempo;
 	}
 
 	

@@ -2,8 +2,9 @@ package com.clj.monitoria.repository;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 
-import com.clj.monitoria.model.Monitores;
+import com.clj.monitoria.model.Comidas;
 
-public interface Monitor extends JpaRepository<Monitores, Long> {
+
+public interface ComidaBD extends JpaRepository<Comidas, Long> {
 
 }
