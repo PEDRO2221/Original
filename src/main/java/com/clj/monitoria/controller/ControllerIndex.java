@@ -19,7 +19,12 @@ public class ControllerIndex {
      @GetMapping("/")
      public String Home() {
     	 return "index";
-     }     
+     }    
+     @GetMapping("/cadastro")
+     public String cadastro() {
+		return "cadastro";
+    	 
+     }
      
     @GetMapping("/deletar/{id}")
     public String delete(@PathVariable("id") Long id) {
