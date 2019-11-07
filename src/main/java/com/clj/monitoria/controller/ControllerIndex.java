@@ -22,7 +22,7 @@ public class ControllerIndex {
      }    
      @GetMapping("/cadastro")
      public String cadastro() {
-		return "redirect:cadastro.html";
+		return "cadastro";
     	 
      }
      
