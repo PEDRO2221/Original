@@ -56,16 +56,8 @@
 
     /*<Bootstrepão-------------------------------------------------------------------------------------------------->*/   
     #tempo{
-      width: 97px;
-      margin-left: 50px
+     display: inline;
       
-    }
-    #porções{
-      position: absolute;
-      width: 105px;
-      top: 24px;
-      margin-left: 150px;
-     bottom: 110px;
     }
     #categoria{
       width: 49.3%    
@@ -84,60 +76,29 @@
 
         
         <form>
-  <div class="form-row">
+    <div class="form-row">
     <div class="form-group col-md-6">
-      <label for="inputEmail4"></label>
-      <input type="email" class="form-control" placeholder="Nome da receita">
+      <input type="text" class="form-control" id="nome" placeholder="Nome da Receita">
     </div>
 
-    <div class="form-group col-md-2">
-      <label></label>
+
+    <div class="form-group col-md-3">
       <input type="number" class="form-control" id="tempo" placeholder="Tempo">
-      <input type="number" class="form-control" id="porções" placeholder="porções">
     </div>
-  
-</div>
+
+
+    <div class="form-group col-md-3">
+      <input type="number" class="form-control" id="Porção" placeholder="Porção">
+    </div>
+    </div>
 
   <div class="form-group">
-    <input type="text" class="form-control" id="categoria" placeholder="Escolha uma categoria">
+    <input type="text" class="form-control" placeholder="Comentarios sobre receita">
   </div>
-
-
-  <div class="form-group">
-    <label for="inputAddress2">Address 2</label>
-    <input type="text" class="form-control" id="inputAddress2" placeholder="Apartment, studio, or floor">
-  </div>
-
-
-  <div class="form-row">
-    <div class="form-group col-md-6">
-      <label for="inputCity">City</label>
-      <input type="text" class="form-control" id="inputCity">
-    </div>
-
-
-    <div class="form-group col-md-4">
-      <label for="inputState">State</label>
-      <select id="inputState" class="form-control">
-        <option selected>Choose...</option>
-        <option>...</option>
-      </select>
-    </div>
-
-
-    <div class="form-group col-md-2">
-      <label for="inputZip">Zip</label>
-      <input type="text" class="form-control" id="inputZip">
-    </div>
-
-  </div>
-  
-
-
       </label>
     </div>
   </div>
-  <button type="submit" class="btn btn-primary">Sign in</button>
+  <button type="submit" class="btn btn-primary">Enviar</button>
 </form>
 
       </form>
