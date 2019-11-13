@@ -1,5 +1,5 @@
-<!DOCTYPE html>
-<html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
 	<head>
 		<meta charset="utf-8">
 		<title>Pagina Inicial</title>
@@ -138,9 +138,9 @@
 
 				<ul class="menu">
 
-					<a href="/index">Inicio</a>
+					<a href="/">Inicio</a>
 					<a href="/listar">Receitas</a>
-					<a href="/cadastro">Crie sua receita</a>
+					<a href="/cad">Crie sua receita</a>
 					<label for="chk" class="hide-menu-btn">
 						<i class="fas fa-times"></i>
 					</label>
@@ -148,7 +148,20 @@
 			</div>
 
 			<form class="login-form">
-				
+					  <table border="1px">  
+	  	<tr>
+	  		<th>Nome da Receita</th>
+	  		<th>Tempo(min.)</th>
+	  		<th>Porção</th> 
+	  		<th>Comentario</th>	
+	  	</tr>
+	  	<tr th:each="x : ${comidas}">
+	  		<td th:text=${x.nome}>1</td>
+	  		<td th:text="${x.tempo}">15min</td> 
+	  		<td th:text="${x.porcao}">2</td> 
+	  		<td th:text="${x.descricao}">Carne</td>   	
+	  	</tr>
+	  </table>
 
 			</form>
 
@@ -160,6 +173,6 @@
 	clearInterval(i);
 	document.getElementById("loading").style.display = "none";
 	document.getElementById("conteudo").style.display = "block";
-}, 100);
+}, 1000);
 	</script>
 </html>
