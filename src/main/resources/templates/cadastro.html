@@ -57,31 +57,6 @@
 
 
     /*<Bootstrepão-------------------------------------------------------------------------------------------------->*/
-    #tempo{
-      width: 97px;
-      margin-left: 50px
-
-    }
-    #porções{
-      position: absolute;
-      width: 105px;
-      top: 39%;
-      margin-left: 120%;
-     bottom: 110px;
-    }
-    #categoria{
-      width: 49.3%
-    }
-    #inputState{
-      width: 140%
-
-    }
-    #paa{
-      font-size:15px;
-    }
-    #ingredientes{
-      height: 30%;
-    }
     </style>
 		<link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" charset="utf-8"></script>
@@ -97,22 +72,21 @@
         <form >
   <div class="form-row">
     <div class="form-group col-md-6">
-      <label for="inputEmail4"></label>
       <input type="text" class="form-control" placeholder="Nome da receita">
     </div>
 
-    <div class="form-group col-md-2">
-      <label></label>
+    <div class="form-group col-md-3">
       <input type="number" class="form-control" id="tempo" placeholder="Tempo">
+    </div>
+    <div class="form-group col-md-3">
       <input type="number" class="form-control" id="porções" placeholder="porções">
     </div>
 
 </div>
-
-  <div class="form-group col-md-4">
-      <label for="inputState">Tipo de receita</label>
-      <select id="inputState" class="form-control">
-        <option selected>...</option>
+ <div class="form-row">
+  <div class="form-group col-md-10">
+      <select class="form-control">
+        <option>Tipo de Receita...</option>
         <option>Lanches</option>
         <option>Bebidas</option>
         <option>Massas</option>
@@ -121,26 +95,24 @@
         <option>Saudável</option>
         <option>Frutos do mar</option>
         <option>Carnes</option>
+        <option>Outro</option>
 
       </select>
     </div>
-
+</div>
 
   <div class="form-group">
-    <label for="inputAddress2">Igredientes:</label>
-    <input type="text" class="form-control" id="ingredientes" placeholder="Ex: 03 Tomates...">
+  	<textarea class="form-control" id="ingredientes" placeholder="Ingredientes : Ex: 03 Tomates..."></textarea>
   </div>
 
 
-  <div class="form-row">
-    <div class="form-group col-md-6">
-      <label for="inputCity">Modo de preparo</label>
-      <input type="text" class="form-control" id="inputCity" placeholder="Ex: Mexa os Igredientes...">
+  <div class="form-group">
+     <textarea class="form-control" id="inputCity" placeholder="Modo de Preparo: Ex: Mexa os Igredientes..."></textarea>
     </div>
 
 
     <div>
-  <label id="paa">Antes de enviar a receita, certifique-se de que escreveu direito e de forma coerente</label>
+  <label>Antes de enviar a receita, certifique-se de que escreveu direito e de forma coerente</label>
   </div>
   <button type="submit" class="btn btn-primary">Enviar</button>
 </form>

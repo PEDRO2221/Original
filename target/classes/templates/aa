@@ -1,0 +1,59 @@
+<style media="screen">
+*{
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  font-family: montserrat;
+  box-sizing: border-box;
+}
+
+
+body{
+  min-height: 100vh;
+  background: linear-gradient(#e67e22,#d35400);
+}
+
+.login-form{
+  width: 50%;
+  background: linear-gradient(120deg,#ecf0f1,#f1f2f6);
+  height: 71%;
+  padding: 80px 40px;
+  border-radius: 8px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%,-50%);
+
+
+}
+
+.login-form h1{
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+}
+a{
+  color: #d35400;
+
+}
+a:hover{
+  color:#e67e22;
+}
+#vo{
+  color: #ecf0f1;
+  margin-left:10px;
+
+}
+#vo : hover{
+ color: black;
+}
+
+/*<Bootstrepão-------------------------------------------------------------------------------------------------->*/
+#tempo{
+ display: inline;
+
+}
+#categoria{
+  width: 49.3%
+}
