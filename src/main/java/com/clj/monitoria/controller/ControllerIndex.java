@@ -39,23 +39,21 @@ public class ControllerIndex {
  		}
  		attributes.addFlashAttribute("mensagem", "Receita salva com sucesso.");
  		comida.save(cmd);		
- 		return "redirect:/cad";
+ 		return "redirect:/";
  	}
      
-   /* @GetMapping("/deletar/{id}")
-    public String delete(@PathVariable("id") Long id) {
-    	comida.deleteById(id);
-    	return "redirect:/";
-     }
-    @GetMapping("/editar/{id}")
-    public String editar(@PathVariable("id") Long id,Model model) {
-    	model.addAttribute("Comidas" , comida.findById(id));
-    	return "editar";
-     }*/
-     
-     
-     
-     
-     
+	@GetMapping("/delete/{id}")
+	public String delete(@PathVariable("id") Long id) {
+		comida.deleteById(id);
+		return "redirect:/";
+		
+	}
+	
+	@GetMapping("/editar/{id}")
+	public String editar(@PathVariable("id") Long id, Model model) {
+		model.addAttribute("comidas", comida.findById(id));
+		return "editar.html";
+		
+	}
      
 }

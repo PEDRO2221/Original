@@ -1,14 +1,22 @@
-<html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+      
 	<head><title>Editar</title></head>
 
 <body>
-<form th:object ="${dados}" method="POST" action="/monitores">
+
+<form th:object ="${comidas}" method="GET" action="/cadastro">
 <label>Codigo :</label>
 <input type="text" th:field="*{id}" readonly="readonly">
-<label>Nome :</label>
+<label>Nome de Receita :</label>
 <input type="text" th:field="*{nome}">
-<label>Dia :</label>
-<input type="text" th:field="*{dia}">
+<label>Tempo(min.) :</label>
+<input type="text" th:field="*{tempo}">
+<label>Porção :</label>
+<input type="text" th:field="*{porcao}">
+<label>Comentario :</label>
+<input type="text" th:field="*{descricao}">
+
 	<input type="submit" value="editar">
 
 </form>

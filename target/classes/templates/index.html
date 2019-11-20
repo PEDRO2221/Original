@@ -122,6 +122,7 @@
 
 
 	<body>
+	<div class="alert alert-success" th:text="${menssagem}" th:if="${not #strings.isEmpty(menssagem)}"></div>
 
 
 		<div id="loading" style="display: block" align="center">
@@ -154,12 +155,16 @@
 	  		<th>Tempo(min.)</th>
 	  		<th>Porção</th> 
 	  		<th>Comentario</th>	
+	  		<th>Editar</th>	
+	  		<th>Excluir</th>	
 	  	</tr>
 	  	<tr th:each="x : ${comidas}">
 	  		<td th:text=${x.nome}>1</td>
 	  		<td th:text="${x.tempo}">15min</td> 
 	  		<td th:text="${x.porcao}">2</td> 
-	  		<td th:text="${x.descricao}">Carne</td>   	
+	  		<td th:text="${x.descricao}">Carne</td> 
+	  		<td><a class="btn btn-outline-danger"        th:href="@{/delete/{id}(id=${x.id})}">Excluir</a></td>	
+	  		<td><a class="btn btn-outline-success"  	 th:href="@{/editar/{id}(id=${x.id})}">Editar</a></td>  	
 	  	</tr>
 	  </table>
 
