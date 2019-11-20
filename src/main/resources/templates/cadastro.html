@@ -21,13 +21,14 @@
     .login-form{
       width: 50%;
       background: linear-gradient(120deg,#ecf0f1,#f1f2f6);
-      height: 71%;
+      height: 98%;
       padding: 80px 40px;
       border-radius: 8px;
       position: absolute;
       left: 50%;
       top: 50%;
       transform: translate(-50%,-50%);
+
 
 
     }
@@ -40,7 +41,7 @@
     }
     a{
       color: #d35400;
-     
+
     }
 		a:hover{
 			color:#e67e22;
@@ -54,52 +55,94 @@
      color: black;
     }
 
-    /*<Bootstrepão-------------------------------------------------------------------------------------------------->*/   
+
+    /*<Bootstrepão-------------------------------------------------------------------------------------------------->*/
     #tempo{
-     display: inline;
-      
+      width: 97px;
+      margin-left: 50px
+
+    }
+    #porções{
+      position: absolute;
+      width: 105px;
+      top: 39%;
+      margin-left: 120%;
+     bottom: 110px;
     }
     #categoria{
-      width: 49.3%    
+      width: 49.3%
     }
+    #inputState{
+      width: 140%
 
+    }
+    #paa{
+      font-size:15px;
+    }
+    #ingredientes{
+      height: 30%;
+    }
     </style>
 		<link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" charset="utf-8"></script>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   </head>
   <body>
-    <a href="/" id="vo">voltar</a>
-    
-    <form class="login-form" action="/cadastro" method="GET">
-    
+    <a href="index.html" id="vo">voltar</a>
+
+      <form action="index.html" class="login-form">
         <h1>CRIE SUA RECEITA</h1>
 
-        
 
-    <div class="form-row">
+        <form >
+  <div class="form-row">
     <div class="form-group col-md-6">
-      <input type="text" class="form-control" placeholder="Nome da Receita" name="nome">
+      <label for="inputEmail4"></label>
+      <input type="text" class="form-control" placeholder="Nome da receita">
     </div>
 
-
-    <div class="form-group col-md-3">
-      <input type="number" class="form-control" placeholder="Tempo" name="tempo">
+    <div class="form-group col-md-2">
+      <label></label>
+      <input type="number" class="form-control" id="tempo" placeholder="Tempo">
+      <input type="number" class="form-control" id="porções" placeholder="porções">
     </div>
 
+</div>
 
-    <div class="form-group col-md-3">
-      <input type="number" class="form-control" placeholder="Porção" name="porcao">
+  <div class="form-group col-md-4">
+      <label for="inputState">Tipo de receita</label>
+      <select id="inputState" class="form-control">
+        <option selected>...</option>
+        <option>Lanches</option>
+        <option>Bebidas</option>
+        <option>Massas</option>
+        <option>Doces</option>
+        <option>Sopas</option>
+        <option>Saudável</option>
+        <option>Frutos do mar</option>
+        <option>Carnes</option>
+
+      </select>
     </div>
-    </div>
+
 
   <div class="form-group">
-    <input type="text" class="form-control" placeholder="Comentarios sobre receita"name="descricao">
+    <label for="inputAddress2">Igredientes:</label>
+    <input type="text" class="form-control" id="ingredientes" placeholder="Ex: 03 Tomates...">
   </div>
-      </label>
+
+
+  <div class="form-row">
+    <div class="form-group col-md-6">
+      <label for="inputCity">Modo de preparo</label>
+      <input type="text" class="form-control" id="inputCity" placeholder="Ex: Mexa os Igredientes...">
     </div>
+
+
+    <div>
+  <label id="paa">Antes de enviar a receita, certifique-se de que escreveu direito e de forma coerente</label>
   </div>
-  <input type="submit" class="btn btn-primary" value="enviar"></input>
+  <button type="submit" class="btn btn-primary">Enviar</button>
 </form>
 
       </form>
