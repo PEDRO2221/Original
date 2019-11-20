@@ -117,6 +117,7 @@
 	 </style>
 	 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 	 <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
+	 
 	</head>
 
 
@@ -163,8 +164,8 @@
 	  		<td th:text="${x.tempo}">15min</td>
 	  		<td th:text="${x.porcao}">2</td>
 	  		<td th:text="${x.descricao}">Carne</td>
-	  		<td><a class="btn btn-outline-danger"        th:href="@{/delete/{id}(id=${x.id})}">Excluir</a></td>
-	  		<td><a class="btn btn-outline-success"  	 th:href="@{/editar/{id}(id=${x.id})}">Editar</a></td>
+	  		<td><a class="btn btn-outline-danger"        th:href="@{/delete/{id}(id=${x.id})}"><img src="https://img.icons8.com/metro/26/000000/delete-sign.png"></td>
+	  		<td><a class="btn btn-outline-success"  	 th:href="@{/editar/{id}(id=${x.id})}"><img src="https://img.icons8.com/metro/26/000000/edit.png"></a></td>
 	  	</tr>
 	  </table>
 
