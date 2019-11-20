@@ -18,15 +18,15 @@ import com.clj.monitoria.repository.ComidaBD;
 public class ControllerIndex {
 	@Autowired
 	ComidaBD comida;
-	
-	
+
+
      @GetMapping("/")
      @PreAuthorize("hasRole('ADMIN')")
      public String Home(Model model) {
     	 model.addAttribute("comidas", comida.findAll());
     	 return "index";
-     }  
- 	@GetMapping("/cad")
+     }
+ 	@GetMapping("/cadastro")
  	public String home() {
  		return "cadastro";
  	}
@@ -38,22 +38,22 @@ public class ControllerIndex {
 
  		}
  		attributes.addFlashAttribute("mensagem", "Receita salva com sucesso.");
- 		comida.save(cmd);		
+ 		comida.save(cmd);
  		return "redirect:/";
  	}
-     
+
 	@GetMapping("/delete/{id}")
 	public String delete(@PathVariable("id") Long id) {
 		comida.deleteById(id);
 		return "redirect:/";
-		
+
 	}
-	
+
 	@GetMapping("/editar/{id}")
 	public String editar(@PathVariable("id") Long id, Model model) {
 		model.addAttribute("comidas", comida.findById(id));
 		return "editar.html";
-		
+
 	}
-     
+
 }
