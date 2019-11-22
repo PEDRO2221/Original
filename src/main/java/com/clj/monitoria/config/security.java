@@ -1,4 +1,4 @@
-package config;
+package com.clj.monitoria.config;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
