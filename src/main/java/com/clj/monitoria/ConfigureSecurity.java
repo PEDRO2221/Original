@@ -42,7 +42,5 @@ public class ConfigureSecurity extends WebSecurityConfigurerAdapter{
 		.anyRequest().authenticated()
 		.and()
 		.formLogin();
-		//.antMatchers("/**").hasAnyRole("USER", "ADMIN");
-		//.antMatchers("/cadastro**").hasAnyRole("USER", "ADMIN")
 	}
 }
