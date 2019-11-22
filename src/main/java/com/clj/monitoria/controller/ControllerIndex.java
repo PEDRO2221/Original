@@ -21,16 +21,19 @@ public class ControllerIndex {
      @GetMapping("/")
      public String Home(Model model) {
     	 model.addAttribute("comidas", comida.findAll());
-    	 return "index";
+    	 return "home";
      }
      
      
      @GetMapping("/home")
      public String user(Model model) {
     	 model.addAttribute("comidas", comida.findAll());
-    	 return "home";
+    	 return "index";
      }
-     
+     @GetMapping("/erro")
+     public String erro() {
+    	 return "erro";
+     }
      
  	@GetMapping("/cad")
  	public String home() {
