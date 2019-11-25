@@ -37,7 +37,7 @@ public class ControllerIndex {
  	}
  	
 
- 	@PostMapping("/cadastro")
+ 	@GetMapping("/cadastro")
  	public String enviar(@Valid Comidas cmd,BindingResult result
  			, RedirectAttributes attributes) {
  				if (result.hasErrors()) {
@@ -45,6 +45,8 @@ public class ControllerIndex {
  		}
  		attributes.addFlashAttribute("mensagem", "Receita salva com sucesso.");
  		comida.save(cmd);
+ 		
+ 			
  		return "redirect:/";
  	}
 
