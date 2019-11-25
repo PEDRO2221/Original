@@ -36,7 +36,7 @@ public class ConfigureSecurity extends WebSecurityConfigurerAdapter{
 		http.authorizeRequests()		
 		.antMatchers("/resources/**", "/webjars/**").permitAll()
 		.antMatchers("/").hasAnyRole("ADMIN","USER")		
-		.antMatchers("/home").hasRole("ADMIN")
+		.antMatchers("/telInicial").hasRole("ADMIN")
 		.antMatchers("/editar/id").hasRole("ADMIN")
 		.antMatchers("/cad").hasAnyRole("ADMIN", "USER")
 		.anyRequest().authenticated()
