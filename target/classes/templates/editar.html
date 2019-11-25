@@ -1,29 +1,76 @@
 <html xmlns="http://www.w3.org/1999/xhtml"
       xmlns:th="http://www.thymeleaf.org">
-      
-	<head><title>Editar</title></head>
+       
+	<head>
+		<title>Editar</title>
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+		<meta charset="utf-8">
+		<style type="text/css">
+		
+		.login-form{
+      width: 50%;
+      background: linear-gradient(120deg,#ecf0f1,#f1f2f6);
+      height: 98%;
+      padding: 80px 40px;
+      border-radius: 8px;
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%,-50%);
+      </style>
+	</head>
 
 <body>
 
-<form th:object ="${comidas}" method="GET" action="/cadastro">
-<label>Codigo :</label>
-<input type="text" th:field="*{id}" readonly="readonly">
-<label>Nome de Receita :</label>
-<input type="text" th:field="*{nome}">
-<label>Tempo(min.) :</label>
-<input type="text" th:field="*{tempo}">
-<label>Porção :</label>
-<input type="text" th:field="*{porcao}">
-<label>Tipo :</label>
-<input type="text" th:field="*{tipo}">
-<label>Modo :</label>
-<input type="text" th:field="*{modo}">
-<label>Ingredientes :</label>
-<input type="text" th:field="*{ingredientes}">
 
-
-	<input type="submit" value="editar">
-
+<div >
+<form th:object ="${comidas}" method="GET" action="/cadastro"  class="login-form">
+<div class="form-row">
+	<div class="form-group col-md-4">
+		<label>Nome de Receita :</label>
+		<input type="text" th:field="*{nome}" class="form-control">
+	</div>
+	<div class="form-group col-md-4">
+		<label for="inputEmail4">Tempo(min.) :</label>
+<input type="text" th:field="*{tempo}" class="form-control">
+	</div>
+	<div class="form-group col-md-4">
+		<label for="inputEmail4">Porção :</label>
+	<input type="text" th:field="*{porcao}" class="form-control">
+	</div>
+	<div class="form-group col-md-4">
+		<label>Tipo :</label>
+		<input type="text" th:field="*{tipo}" class="form-control">
+	</div>
+	<div class="form-group col-md-4">
+		<label>Modo :</label>
+<input type="text" th:field="*{modo}" class="form-control">
+	</div>
+	<div class="form-group col-md-4">
+		<label>Ingredientes :</label>
+<input type="text" th:field="*{ingredientes}" class="form-control">
+	</div>
+	<div>
+		<button type="submit" class="btn btn-primary">Editar</button>
+	</div>
+</div>
 </form>
+</div>
+
 </body>
+
+
+
+      <script type="text/javascript">
+      $(".txtb input").on("focus",function(){
+        $(this).addClass("focus");
+      });
+
+      $(".txtb input").on("blur",function(){
+        if($(this).val() == "")
+        $(this).removeClass("focus");
+      });
+
+      </script>
+
 </html>
