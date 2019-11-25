@@ -62,14 +62,15 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" charset="utf-8"></script>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   </head>
+  
+  
+  
   <body>
-    <a href="/">voltar</a>
+    <a href="/">Voltar</a>
 
-      <form action="/cadastro" class="login-form">
+      <form action="/cadastro" class="login-form" method="POST">
         <h1>CRIE SUA RECEITA</h1>
 
-
-        <form action="/cadastro">
   <div class="form-row">
     <div class="form-group col-md-6">
       <input type="text" class="form-control" id="nome" name="nome" placeholder="Nome da receita">
@@ -117,7 +118,6 @@
   <button type="submit" class="btn btn-primary">Enviar</button>
 </form>
 
-      </form>
 
       <script type="text/javascript">
       $(".txtb input").on("focus",function(){
