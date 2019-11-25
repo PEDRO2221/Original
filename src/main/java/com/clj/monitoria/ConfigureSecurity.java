@@ -39,6 +39,7 @@ public class ConfigureSecurity extends WebSecurityConfigurerAdapter{
 		.antMatchers("/telInicial").hasRole("ADMIN")
 		.antMatchers("/editar/id").hasRole("ADMIN")
 		.antMatchers("/cad").hasAnyRole("ADMIN", "USER")
+		.antMatchers("/cadastro").hasAnyRole("ADMIN", "USER")
 		.anyRequest().authenticated()
 		.and()
 		.formLogin();
