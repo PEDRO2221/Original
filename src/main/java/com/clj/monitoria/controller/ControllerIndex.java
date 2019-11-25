@@ -30,10 +30,6 @@ public class ControllerIndex {
     	 model.addAttribute("comidas", comida.findAll());
     	 return "index";
      }
-     @GetMapping("/erro")
-     public String erro() {
-    	 return "erro";
-     }
      
  	@GetMapping("/cad")
  	public String home() {
@@ -41,7 +37,7 @@ public class ControllerIndex {
  	}
  	
 
- 	@PostMapping("/cadastro")
+ 	@GetMapping("/cadastro")
  	public String enviar(@Valid Comidas cmd,BindingResult result
  			, RedirectAttributes attributes) {
  				if (result.hasErrors()) {
