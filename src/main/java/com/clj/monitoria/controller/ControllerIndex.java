@@ -60,7 +60,7 @@ public class ControllerIndex {
 	@GetMapping("/editar/{id}")
 	public String editar(@PathVariable("id") Long id, Model model) {
 		model.addAttribute("comidas", comida.findById(id));
-		return "editar.html";
+		return "editar";
 
 	}
 
