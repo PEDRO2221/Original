@@ -1,9 +1,13 @@
-<html lang="en" dir="ltr" xmlns="http://www.w3.org/1999/xhtml"
+<html xmlns="http://www.w3.org/1999/xhtml"
       xmlns:th="http://www.thymeleaf.org">
   <head>
     <meta charset="utf-8">
     <title>Editar</title>
     <style media="screen">
+    body{
+      min-height: 100vh;
+      background: linear-gradient(#e67e22,#d35400);
+    }
     *{
       margin: 0;
       padding: 0;
@@ -11,13 +15,6 @@
       font-family: montserrat;
       box-sizing: border-box;
     }
-
-
-    body{
-      min-height: 100vh;
-      background: linear-gradient(#e67e22,#d35400);
-    }
-
     .login-form{
       width: 50%;
       background: linear-gradient(120deg,#ecf0f1,#f1f2f6);
@@ -54,9 +51,6 @@
     #vo : hover{
      color: black;
     }
-
-
-    /*<Bootstrepão-------------------------------------------------------------------------------------------------->*/
     </style>
 		<link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" charset="utf-8"></script>
@@ -77,23 +71,23 @@
   		<input type="text" th:field="*{id}" class="form-control" readonly="readonly">
   	</div>
     <div class="form-group col-md-6">
-			<label for="inputEmail4">Nome da Receita :</label>
+			<label>Nome da Receita :</label>
       <input type="text" class="form-control" id="nome" name="nome" placeholder="Nome da receita" th:field="*{nome}">
     </div>
 
     <div class="form-group col-md-2">
-			<label for="inputEmail4">Tempo(min.) :</label>
+			<label>Tempo(min.) :</label>
       <input type="number" class="form-control" id="tempo" name="tempo" placeholder="Tempo" th:field="*{tempo}">
     </div>
     <div class="form-group col-md-2">
-			<label for="inputEmail4">Porção :</label>
+			<label>Porção :</label>
       <input type="number" class="form-control" id="porcao" name="porcao" placeholder="porções" th:field="*{porcao}">
     </div>
 
 </div>
  <div class="form-row">
   <div class="form-group col-md-5">
-		<label for="inputEmail4">Tipo :</label>
+		<label>Tipo :</label>
 				<select class="form-control"  th:field="*{tipo}" id="tipo" name="tipo">
 				  <option>Tipo de Receita...</option>
 				  <option>Lanches</option>
@@ -112,13 +106,13 @@
 </div>
 
   <div class="form-group">
-		<label for="inputEmail4">Ingredientes :</label>
+		<label>Ingredientes :</label>
   	<textarea class="form-control" id="ingredientes" name="ingredientes" placeholder="Ingredientes : Ex: 03 Tomates..." th:field="*{ingredientes}"></textarea>
   </div>
 
 
   <div class="form-group">
-		<label for="inputEmail4">Modo de Preparo :</label>
+		<label>Modo de Preparo :</label>
      <textarea class="form-control" id="modo" name="modo" placeholder="Modo de Preparo: Ex: Mexa os Igredientes..." th:field="*{modo}"></textarea>
     </div>
 
