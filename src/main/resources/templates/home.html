@@ -127,7 +127,7 @@
 
 
 		<div id="loading" style="display: block" align="center">
-			<img src="https://media.giphy.com/media/xVBUD7Y02os6Y/giphy.gif" alt="" id="loading" align="center">
+			<img src="https://media.giphy.com/media/xVBUD7Y02os6Y/giphy.gif" id="loading" align="center">
 		</div>
 
 
@@ -135,13 +135,10 @@
 
 
 			<div class="header">
-				<img >
-
-
 				<ul class="menu">
 
 					<a href="/">Inicio</a>
-					<a href="/home">Administração</a>
+					<a href="/telInicial">Administração</a>
 					<a href="/listar">Receitas</a>
 					<a href="/cad">Crie sua receita</a>
 					<a href="/logout">Sair</a>
@@ -160,18 +157,14 @@
 	  		<th scope="col">Tipo</th>
 	  		<th scope="col">Modo</th>
 	  		<th scope="col">Ingredientes</th>
-	  		<th scope="col">Excluir</th>
-	  		<th scope="col">Editar</th>
 	  	</tr>
 	  	<tr th:each="x : ${comidas}">
 	  		<td th:text=${x.nome}>1</td>
 	  		<td th:text="${x.tempo}">15min</td>
 	  		<td th:text="${x.porcao}">2</td>
 	  		<td th:text="${x.tipo}">Carne</td>
-	  		<td th:text="${x.modo}">pão</td>
-	  		<td th:text="${x.ingredientes}">ovo</td>
-	  		<td><a class="btn btn-outline-danger"        th:href="@{/delete/{id}(id=${x.id})}"><img src="https://img.icons8.com/metro/26/000000/delete-sign.png"></td>
-	  		<td><a class="btn btn-outline-success"  	 th:href="@{/editar/{id}(id=${x.id})}"><img src="https://img.icons8.com/metro/26/000000/edit.png"></a></td>
+	  		<td th:text="${x.modo}">dgdfsg</td>
+	  		<td th:text="${x.ingredientes}">gsdfg</td>
 	  	</tr>
 	  </table>
 

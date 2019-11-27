@@ -62,30 +62,31 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" charset="utf-8"></script>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   </head>
+  
+  
+  
   <body>
-    <a href="index.html" id="vo">voltar</a>
+    <a href="/">Voltar</a>
 
-      <form action="index.html" class="login-form">
+      <form action="/cadastro" class="login-form" method="GET">
         <h1>CRIE SUA RECEITA</h1>
 
-
-        <form >
   <div class="form-row">
     <div class="form-group col-md-6">
-      <input type="text" class="form-control" placeholder="Nome da receita">
+      <input type="text" class="form-control" id="nome" name="nome" placeholder="Nome da receita">
     </div>
 
     <div class="form-group col-md-3">
-      <input type="number" class="form-control" id="tempo" placeholder="Tempo">
+      <input type="number" class="form-control" id="tempo" name="tempo" placeholder="Tempo">
     </div>
     <div class="form-group col-md-3">
-      <input type="number" class="form-control" id="porções" placeholder="porções">
+      <input type="number" class="form-control" id="porcao" name="porcao" placeholder="porções">
     </div>
 
 </div>
  <div class="form-row">
   <div class="form-group col-md-10">
-      <select class="form-control">
+      <select class="form-control" id="tipo" name="tipo">
         <option>Tipo de Receita...</option>
         <option>Lanches</option>
         <option>Bebidas</option>
@@ -95,29 +96,28 @@
         <option>Saudável</option>
         <option>Frutos do mar</option>
         <option>Carnes</option>
-        <option>Outro...</option>
+        <option>Outro</option>
 
       </select>
     </div>
 </div>
 
   <div class="form-group">
-  	<textarea class="form-control" id="ingredientes" placeholder="Ingredientes : Ex: 03 Tomates..."></textarea>
+  	<textarea class="form-control" id="ingredientes" name="ingredientes" placeholder="Ingredientes : Ex: 03 Tomates..."></textarea>
   </div>
 
 
   <div class="form-group">
-     <textarea class="form-control" id="inputCity" placeholder="Modo de Preparo: Ex: Mexa os Igredientes..."></textarea>
+     <textarea class="form-control" id="modo" name="modo" placeholder="Modo de Preparo: Ex: Mexa os Igredientes..."></textarea>
     </div>
 
 
     <div>
-  <label>Antes de enviar a receita, certifique-se de que escreveu direito e de forma coerente</label>
+  <label >Antes de enviar a receita, certifique-se de que escreveu direito e de forma coerente</label>
   </div>
   <button type="submit" class="btn btn-primary">Enviar</button>
 </form>
 
-      </form>
 
       <script type="text/javascript">
       $(".txtb input").on("focus",function(){
