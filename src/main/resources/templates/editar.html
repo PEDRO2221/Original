@@ -1,12 +1,12 @@
 <html xmlns="http://www.w3.org/1999/xhtml"
       xmlns:th="http://www.thymeleaf.org">
-       
+
 	<head>
 		<title>Editar</title>
 		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 		<meta charset="utf-8">
 		<style type="text/css">
-		
+
 		.login-form{
       width: 50%;
       background: linear-gradient(120deg,#ecf0f1,#f1f2f6);
@@ -27,7 +27,7 @@
 <form th:object ="${comidas}" method="GET" action="/cadastro"  class="login-form">
 <div class="form-row">
 	<div class="form-group col-md-4">
-		<label>ID :</label>
+		<label>Id :</label>
 		<input type="text" th:field="*{id}" class="form-control" readonly="readonly">
 	</div>
 	<div class="form-group col-md-4">
