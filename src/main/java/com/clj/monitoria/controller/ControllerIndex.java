@@ -21,19 +21,19 @@ public class ControllerIndex {
 	@Autowired
 	ComidaBD comida;
 
-		 @GetMapping("/")
+@GetMapping("/")
      public String Home(Model model) {
     	 model.addAttribute("comidas", comida.findAll());
     	 return "home";
      }
-     @GetMapping("/listar")
+ @GetMapping("/listar")
      public String list(Model model) {
     	 model.addAttribute("comidas", comida.findAll());
     	 return "receitas";
      }
 
 
-     @GetMapping("/telInicial")
+@GetMapping("/telInicial")
      public String user(Model model) {
     	 model.addAttribute("comidas", comida.findAll());
     	 return "index";
@@ -48,22 +48,22 @@ public class ControllerIndex {
  	@GetMapping("/cada")
  	public String enviar(@Valid Comidas cmd,BindingResult result
  			, RedirectAttributes attributes) {
- 				if (result.hasErrors()) {
+ 				if(result.hasErrors()) {
  		}
  		attributes.addFlashAttribute("mensagem", "Receita salva com sucesso.");
  		comida.save(cmd);
- 		return "redirect:/";
+ 		return "redirect:/telInicial";
  	}
 
 	@GetMapping("/delete/{id}")
 	public String delete(@PathVariable("id") Long id) {
 		comida.deleteById(id);
-		return "redirect:/";
+		return "redirect:/telInicial";
 
 	}
 
 	@GetMapping("/editar/{id}")
-	public String editar(@PathVariable("id") Long id, Model model , RedirectAttributes attributes) {
+	public String editar(@PathVariable("id") Long id, Model model, RedirectAttributes attributes) {
 		model.addAttribute("comidas", comida.findById(id));
 		return "editar";
 

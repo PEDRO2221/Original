@@ -3,7 +3,12 @@
   <head>
     <meta charset="utf-8">
     <title>Editar Receita</title>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" charset="utf-8"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  </head>
     <style media="screen">
+
     body{
       min-height: 100vh;
       background: linear-gradient(#e67e22,#d35400);
@@ -48,14 +53,7 @@
 	height: 50px;
 }
     </style>
-		<link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" charset="utf-8"></script>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-  </head>
-
-
-
-  <body>
+		  <body>
     <a href="/">Voltar</a>
 
       <form th:object ="${comidas}" method="GET" action="/cada"  class="login-form">
@@ -110,10 +108,6 @@
 		<label>Modo de Preparo :</label>
      <textarea class="form-control" placeholder="Modo de Preparo: Ex: Mexa os Igredientes..." th:field="*{modo}" style="height: auto;"></textarea>
     </div>
-
-
-    <div>
-  </div>
   <button type="submit" class="btn btn-primary">Enviar</button>
 </form>
 
