@@ -45,7 +45,7 @@ public class ControllerIndex {
  	}
 
 
- 	@GetMapping("/cadastro")
+ 	@GetMapping("/cada")
  	public String enviar(@Valid Comidas cmd,BindingResult result
  			, RedirectAttributes attributes) {
  				if (result.hasErrors()) {
