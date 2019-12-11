@@ -2,7 +2,7 @@
       xmlns:th="http://www.thymeleaf.org">
 	<head>
 		<meta charset="utf-8">
-		<title>Pagina Inicial</title>
+		<title>Receitas</title>
 	 <style media="screen">
 
 	 #loading{
@@ -117,7 +117,7 @@
 	 </style>
 	 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 	 <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
-
+	 
 	</head>
 
 
@@ -180,171 +180,4 @@
 	document.getElementById("conteudo").style.display = "block";
 }, 1000);
 	</script>
-=======
-<html xmlns="http://www.w3.org/1999/xhtml"
-      xmlns:th="http://www.thymeleaf.org">
-	<head>
-		<meta charset="utf-8">
-		<title>Pagina Inicial</title>
-	 <style media="screen">
-
-	 #loading{
-	align-items: center;
-	border-radius: 50%;
-	position: absolute;
-	top: 25%;
-	left: 37%;
-	 }
-
-	body{
-	background-image: linear-gradient(120deg, #e67e22,#d35400);
-	min-height: 100vh;
-	}
-	*{
-	  margin: 0;
-	  padding: 0;
-	  font-family: "montserrat",sans-serif;
-	}
-	.header{
-	  height: 90px;
-	  background-image: linear-gradient(120deg,#ecf0f1,#f1f2f6);
-	  padding: 0 20px;
-	  color: #fff;
-	}
-	.logo{
-	  line-height: 100px;
-	  float: left;
-	  text-transform: uppercase;
-	}
-
-	.menu{
-	  float: right;
-	  line-height: 100px;
-	}
-	.menu a{
-	  color: black;
-	  text-transform: uppercase;
-	  text-decoration: none;
-	  padding:10px;
-	  transition: 0.4s;
-	  font-family: montserrat;
-	  font-size: 20px;
-	  outline: none;
-	}
-
-	.show-menu-btn,.hide-menu-btn{
-	  transition: 0.4s;
-	  font-size: 30px;
-	  cursor: pointer;
-	  display: none;
-	}
-	.show-menu-btn{
-	  float: right;
-	}
-	.show-menu-btn i{
-	  line-height: 100px;
-	}
-	.menu a:hover{
-	  color: #e67e22;
-	  text-decoration: none;
-	}
-
-	#chk{
-	  position: absolute;
-	  visibility: hidden;
-	  z-index: -1111;
-	}
-
-
-	@media screen and (max-width:40%) {
-	  .show-menu-btn,.hide-menu-btn{
-	    display: block;
-	  }
-	  .menu{
-	    position: fixed;
-	    width: 100%;
-	    height: 100px;
-
-
-	    right: -100%;
-	    top: 0;
-	    text-align: center;
-
-	    line-height: normal;
-	    transition: 0.7s;
-	  }
-
-	}
-	.div_teste{
-       width:700px;
-       height:500px;
-       position:absolute;
-       z-index:100;
-       top:50px;
-       margin-left:300px;
-}
-
-	 .login-form{
-      width: 98%;
-      background: linear-gradient(120deg,#ecf0f1,#f1f2f6);
-      height: 86%;
-      border-radius: 8px;
-      position: absolute;
-      left: 50%;
-      top: 55%;
-      transform: translate(-50%,-50%);
-
-
-    }
-
-	 </style>
-	 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-	 <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
-
-	</head>
-
-
-
-	<body>
-
-
-
-		<div id="loading" style="display: block" align="center">
-			<img src="https://media.giphy.com/media/xVBUD7Y02os6Y/giphy.gif" id="loading" align="center">
-		</div>
-
-
-	<div id="conteudo" style="display: none">
-
-
-			<div class="header">
-				<ul class="menu">
-
-					<a href="/">Inicio</a>
-					<a href="/telInicial">Administração</a>
-					<a href="/listar">Receitas</a>
-					<a href="/cad">Crie sua receita</a>
-					<a href="/logout">Sair</a>
-					<label for="chk" class="hide-menu-btn">
-						<i class="fas fa-times"></i>
-					</label>
-				</ul>
-			</div>
-
-			<form class="login-form">
-
-
-			</form>
-
-
-	</body>
-	<script type="text/javascript">
-	var i = setInterval(function () {
-
-	clearInterval(i);
-	document.getElementById("loading").style.display = "none";
-	document.getElementById("conteudo").style.display = "block";
-}, 1000);
-	</script>
->>>>>>> 1c4962235244ac20af2ec959ff0ea92f28aad8ad
 </html>

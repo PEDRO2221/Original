@@ -1,24 +1,148 @@
 <html xmlns="http://www.w3.org/1999/xhtml"
       xmlns:th="http://www.thymeleaf.org">
-      
-	<head><title>Editar</title></head>
+  <head>
+    <meta charset="utf-8">
+    <title>Editar</title>
+    <style media="screen">
+    body{
+      min-height: 100vh;
+      background: linear-gradient(#e67e22,#d35400);
+    }
+    *{
+      margin: 0;
+      padding: 0;
+      text-decoration: none;
+      font-family: montserrat;
+      box-sizing: border-box;
+    }
+    .login-form{
+      width: 50%;
+      background: linear-gradient(120deg,#ecf0f1,#f1f2f6);
+      height: 98%;
+      padding: 80px 40px;
+      border-radius: 8px;
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%,-50%);
 
-<body>
 
-<form th:object ="${comidas}" method="GET" action="/cadastro">
-<label>Codigo :</label>
-<input type="text" th:field="*{id}" readonly="readonly">
-<label>Nome de Receita :</label>
-<input type="text" th:field="*{nome}">
-<label>Tempo(min.) :</label>
-<input type="text" th:field="*{tempo}">
-<label>Porção :</label>
-<input type="text" th:field="*{porcao}">
-<label>Comentario :</label>
-<input type="text" th:field="*{descricao}">
 
-	<input type="submit" value="editar">
+    }
 
+    .login-form h1{
+      text-align: center;
+      margin-bottom: 60px;
+    }
+
+    }
+    a{
+      color: #d35400;
+
+    }
+		a:hover{
+			color:#e67e22;
+		}
+    #vo{
+      color: #ecf0f1;
+      margin-left:10px;
+
+    }
+    #vo : hover{
+     color: black;
+    }
+    textarea {
+	height: 50px;
+}
+    </style>
+		<link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" charset="utf-8"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  </head>
+
+
+
+  <body>
+    <a href="/">Voltar</a>
+
+      <form th:object ="${comidas}" method="GET" action="/cadastro"  class="login-form">
+        <h1>EDITAR SUA RECEITA</h1>
+
+  <div class="form-row">
+    <div class="form-group col-md-1">
+  		<label>Id :</label>
+  		<input type="text" th:field="*{id}" class="form-control" readonly="readonly">
+  	</div>
+    <div class="form-group col-md-6">
+			<label>Nome da Receita :</label>
+      <input type="text" class="form-control" placeholder="Nome da receita" th:field="*{nome}">
+    </div>
+
+    <div class="form-group col-md-2">
+			<label>Tempo(min.) :</label>
+      <input type="number" class="form-control" placeholder="Tempo" th:field="*{tempo}">
+    </div>
+    <div class="form-group col-md-2">
+			<label>Porção :</label>
+      <input type="number" class="form-control" placeholder="porções" th:field="*{porcao}">
+    </div>
+
+</div>
+ <div class="form-row">
+  <div class="form-group col-md-5">
+		<label>Tipo :</label>
+				<select class="form-control">
+				  <option selected="selected"  th:each="p: ${modo}"
+                        th:value="${p.tipo}" th:text="${p.tipo}"></option>
+				  <option>Lanches</option>
+				  <option>Bebidas</option>
+				  <option>Massas</option>
+				  <option>Doces</option>
+				  <option>Sopas</option>
+				  <option>Saudável</option>
+				  <option>Frutos do mar</option>
+				  <option>Carnes</option>
+				  <option>Outro</option>
+
+				</select>
+			  </div>
+    </div>
+</div>
+	<div class="from-row">
+  		<input type="file" class="custom-file-input" id="customFile">
+  		<label class="custom-file-label" for="customFile">Choose file</label>
+	</div>
+
+  <div class="form-group"> 
+		<label>Ingredientes :</label>
+  	<textarea class="form-control" placeholder="Ingredientes : Ex: 03 Tomates..." th:field="*{ingredientes}" height="40px"></textarea>
+  </div>
+
+
+  <div class="form-group">
+		<label>Modo de Preparo :</label>
+     <textarea class="form-control" placeholder="Modo de Preparo: Ex: Mexa os Igredientes..." th:field="*{modo}" style="height: auto;"></textarea>
+    </div>
+
+
+    <div>
+  </div>
+  <button type="submit" class="btn btn-primary">Enviar</button>
 </form>
-</body>
+
+
+      <script type="text/javascript">
+      $(".txtb input").on("focus",function(){
+        $(this).addClass("focus");
+      });
+
+      $(".txtb input").on("blur",function(){
+        if($(this).val() == "")
+        $(this).removeClass("focus");
+      });
+
+      </script>
+
+
+  </body>
 </html>
