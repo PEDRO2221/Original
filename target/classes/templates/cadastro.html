@@ -14,19 +14,24 @@
 
 
     body{
-      min-height: 100vh;
+      min-height: 127vh;
       background: linear-gradient(#e67e22,#d35400);
+    }
+
+    #a{
+      margin-left: 10px;
+      
     }
 
     .login-form{
       width: 50%;
       background: linear-gradient(120deg,#ecf0f1,#f1f2f6);
-      height: 98%;
+      height: 120%;
       padding: 80px 40px;
       border-radius: 8px;
       position: absolute;
       left: 50%;
-      top: 50%;
+      top: 63%;
       transform: translate(-50%,-50%);
 
 
@@ -35,17 +40,9 @@
 
     .login-form h1{
       text-align: center;
-      margin-bottom: 60px;
+      margin-bottom: 40px;
     }
-
-    }
-    a{
-      color: #d35400;
-
-    }
-		a:hover{
-			color:#e67e22;
-		}
+   
     #vo{
       color: #ecf0f1;
       margin-left:10px;
@@ -55,9 +52,34 @@
      color: black;
     }
 
+    #img{
+    margin-bottom: 5px;
+    margin-left: 7px;
+    }
+     #img2{
+      
+    margin-left: 7px;
+    }
+    #img3{
+      margin-bottom: 5px;
+      margin-left: 7px;
+    }
+    #img4{
+      margin-bottom: 5px;
+      margin-left: 7px;
+    }
+    #img5{
+      margin-bottom: 5px;
+      margin-left: 7px;
+    }
+    #img6{
+      margin-bottom: 5px;
+      margin-left: 7px;
+    }
 
-    /*<Bootstrepão-------------------------------------------------------------------------------------------------->*/
     </style>
+
+
 		<link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" charset="utf-8"></script>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
@@ -66,24 +88,31 @@
   
   
   <body>
-    <a href="/">Voltar</a>
+      <a href="/" id="a"><img src="back.png" height="20" width="20"></a>
 
       <form action="/cadastro" class="login-form" method="GET">
         <h1>CRIE SUA RECEITA</h1>
 
   <div class="form-row">
-    <div class="form-group col-md-6">
-      <input type="text" class="form-control" id="nome" name="nome" placeholder="Nome da receita">
-    </div>
 
-    <div class="form-group col-md-3">
-      <input type="number" class="form-control" id="tempo" name="tempo" placeholder="Tempo">
-    </div>
-    <div class="form-group col-md-3">
-      <input type="number" class="form-control" id="porcao" name="porcao" placeholder="porções">
-    </div>
+        <div class="form-group col-md-6">
+          <img src="nom.png" width="40" height="40" id="img3">
+          <input type="text" class="form-control" id="nome" name="nome" placeholder="Nome da receita">
+        </div>
 
-</div>
+        <div class="form-group col-md-3">
+          <img src="timer.png" width="40" height="39" id="img">
+          <input type="number" class="form-control" id="tempo" name="tempo" placeholder="Tempo">
+        </div>
+
+           
+        <div class="form-group col-md-3">
+          <img src="por.png" width="42" height="43" id="img2">
+          <input type="number" class="form-control" id="porcao" name="porcao" placeholder="porções">
+        </div>
+
+  </div>
+    <img src="tip.png" width="40" height="40" id="img4">
  <div class="form-row">
   <div class="form-group col-md-10">
       <select class="form-control" id="tipo" name="tipo">
@@ -96,24 +125,27 @@
         <option>Saudável</option>
         <option>Frutos do mar</option>
         <option>Carnes</option>
-        <option>Outro...</option>
+        <option>Outro</option>
 
       </select>
     </div>
 </div>
-
+  
+    <img src="ingr.png" width="40" height="40" id="img5">
   <div class="form-group">
   	<textarea class="form-control" id="ingredientes" name="ingredientes" placeholder="Ingredientes : Ex: 03 Tomates..."></textarea>
   </div>
 
+    
 
+    <img src="prep.png" width="40" height="40" id="img6">
   <div class="form-group">
      <textarea class="form-control" id="modo" name="modo" placeholder="Modo de Preparo: Ex: Mexa os Igredientes..."></textarea>
     </div>
 
 
     <div>
-  <label >Antes de enviar a receita, certifique-se de que escreveu direito e de forma coerente</label>
+  <label >Antes de enviar a receita, certifique-se de que escreveu corretamente e de forma coerente</label>
   </div>
   <button type="submit" class="btn btn-primary">Enviar</button>
 </form>

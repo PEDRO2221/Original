@@ -2,7 +2,7 @@
       xmlns:th="http://www.thymeleaf.org">
 	<head>
 		<meta charset="utf-8">
-		<title>Pagina Inicial</title>
+		<title>Cozinha Brasil</title>
 	 <style media="screen">
 
 	 #loading{
@@ -117,7 +117,7 @@
 	 </style>
 	 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 	 <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
-	 
+
 	</head>
 
 
@@ -135,12 +135,11 @@
 
 
 			<div class="header">
-				<img >
+
 
 
 				<ul class="menu">
-
-					<a href="/">Inicio</a>
+          <a href="/">Inicio</a>
 					<a href="/home">Administração</a>
 					<a href="/listar">Receitas</a>
 					<a href="/cad">Crie sua receita</a>
@@ -185,6 +184,6 @@
 	clearInterval(i);
 	document.getElementById("loading").style.display = "none";
 	document.getElementById("conteudo").style.display = "block";
-}, 1000);
+}, 200);
 	</script>
 </html>
