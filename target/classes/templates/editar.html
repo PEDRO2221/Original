@@ -57,9 +57,9 @@
 
 
   <body>
-    <a href="/" id="a"><img src="back.png" height="20" width="20"></a>
+    <a href="/">Voltar</a>
 
-      <form th:object ="${comidas}" method="GET" action="/cadastro"  class="login-form">
+      <form th:object ="${comidas}" method="GET" action="/cada"  class="login-form">
         <h1>EDITAR SUA RECEITA</h1>
 
   <div class="form-row">
@@ -85,9 +85,8 @@
  <div class="form-row">
   <div class="form-group col-md-5">
 		<label>Tipo :</label>
-				<select class="form-control">
-				  <option selected="selected"  th:each="p: ${modo}"
-                        th:value="${p.tipo}" th:text="${p.tipo}"></option>
+				<select class="form-control" th:field="*{tipo}">
+				  <option value="selecione">selecione</option>
 				  <option>Lanches</option>
 				  <option>Bebidas</option>
 				  <option>Massas</option>
@@ -102,7 +101,6 @@
 			  </div>
     </div>
 </div>
-
 
   <div class="form-group">
 		<label>Ingredientes :</label>
