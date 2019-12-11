@@ -20,7 +20,6 @@ public class ControllerIndex {
 	@Autowired
 	ComidaBD comida;
 
-<<<<<<< HEAD
      @PreAuthorize("hasRole('ADMIN')")
 		 @GetMapping("/")
 

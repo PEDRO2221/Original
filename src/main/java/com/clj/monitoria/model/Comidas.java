@@ -29,7 +29,7 @@ public class Comidas {
 	@NotNull(message = "Modo de preparo é obrigatorio!")
 	@Column
   	private String modo;
-	
+
 
   	public double getPorcao() {
   		return porcao;
@@ -81,5 +81,5 @@ public class Comidas {
 	public void setTipo(String tipo) {
 		this.tipo = tipo;
 	}
-	
+
 }
