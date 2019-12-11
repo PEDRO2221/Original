@@ -1,21 +1,14 @@
-<<<<<<< HEAD
-<!DOCTYPE html>
-<html lang="en" dir="ltr">
-=======
+
 <html xmlns="http://www.w3.org/1999/xhtml"
       xmlns:th="http://www.thymeleaf.org">
->>>>>>> 1c4962235244ac20af2ec959ff0ea92f28aad8ad
   <head>
     <meta charset="utf-8">
     <title>Editar</title>
     <style media="screen">
-<<<<<<< HEAD
-=======
     body{
       min-height: 100vh;
       background: linear-gradient(#e67e22,#d35400);
     }
->>>>>>> 1c4962235244ac20af2ec959ff0ea92f28aad8ad
     *{
       margin: 0;
       padding: 0;
@@ -23,14 +16,6 @@
       font-family: montserrat;
       box-sizing: border-box;
     }
-<<<<<<< HEAD
-
-
-    body{
-      min-height: 100vh;
-      background: linear-gradient(#e67e22,#d35400);
-    }
-
     .login-form{
       width: 50%;
       background: linear-gradient(120deg,#ecf0f1,#f1f2f6);
@@ -41,37 +26,14 @@
       left: 50%;
       top: 50%;
       transform: translate(-50%,-50%);
-
-
-
     }
-
-=======
-    .login-form{
-      width: 50%;
-      background: linear-gradient(120deg,#ecf0f1,#f1f2f6);
-      height: 98%;
-      padding: 80px 40px;
-      border-radius: 8px;
-      position: absolute;
-      left: 50%;
-      top: 50%;
-      transform: translate(-50%,-50%);
-
-
-
-    }
-
->>>>>>> 1c4962235244ac20af2ec959ff0ea92f28aad8ad
     .login-form h1{
       text-align: center;
       margin-bottom: 60px;
     }
-
     }
     a{
       color: #d35400;
-
     }
 		a:hover{
 			color:#e67e22;
@@ -79,49 +41,18 @@
     #vo{
       color: #ecf0f1;
       margin-left:10px;
-
     }
     #vo : hover{
      color: black;
     }
-<<<<<<< HEAD
-
-
-    /*<Bootstrepão-------------------------------------------------------------------------------------------------->*/
-=======
     textarea {
 	height: 50px;
 }
->>>>>>> 1c4962235244ac20af2ec959ff0ea92f28aad8ad
     </style>
 		<link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" charset="utf-8"></script>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   </head>
-<<<<<<< HEAD
-  
-  
-  
-  <body>
-    <a href="/">Voltar</a>
-
-      <form action="/cadastro" class="login-form" method="GET">
-        <h1>EDITAR SUA RECEITA</h1>
-
-  <div class="form-row">
-    <div class="form-group col-md-6">
-			<label for="inputEmail4">Nome da Receita :</label>
-      <input type="text" class="form-control" id="nome" name="nome" placeholder="Nome da receita" th:field="*{nome}">
-    </div>
-
-    <div class="form-group col-md-3">
-			<label for="inputEmail4">Tempo(min.) :</label>
-      <input type="number" class="form-control" id="tempo" name="tempo" placeholder="Tempo" th:field="*{tempo}">
-    </div>
-    <div class="form-group col-md-3">
-			<label for="inputEmail4">Porção :</label>
-      <input type="number" class="form-control" id="porcao" name="porcao" placeholder="porções" th:field="*{porcao}">
-=======
 
 
 
@@ -148,22 +79,15 @@
     <div class="form-group col-md-2">
 			<label>Porção :</label>
       <input type="number" class="form-control" placeholder="porções" th:field="*{porcao}">
->>>>>>> 1c4962235244ac20af2ec959ff0ea92f28aad8ad
     </div>
 
 </div>
  <div class="form-row">
   <div class="form-group col-md-5">
-<<<<<<< HEAD
-		<label for="inputEmail4">Tipo :</label>
-				<select class="form-control"  th:field="*{tipo}" id="tipo" name="tipo">
-				  <option>Tipo de Receita...</option>
-=======
 		<label>Tipo :</label>
 				<select class="form-control">
 				  <option selected="selected"  th:each="p: ${modo}"
                         th:value="${p.tipo}" th:text="${p.tipo}"></option>
->>>>>>> 1c4962235244ac20af2ec959ff0ea92f28aad8ad
 				  <option>Lanches</option>
 				  <option>Bebidas</option>
 				  <option>Massas</option>
@@ -173,41 +97,25 @@
 				  <option>Frutos do mar</option>
 				  <option>Carnes</option>
 				  <option>Outro</option>
-<<<<<<< HEAD
-		  
-=======
 
->>>>>>> 1c4962235244ac20af2ec959ff0ea92f28aad8ad
 				</select>
 			  </div>
     </div>
 </div>
-<<<<<<< HEAD
-
-  <div class="form-group">
-		<label for="inputEmail4">Ingredientes :</label>
-  	<textarea class="form-control" id="ingredientes" name="ingredientes" placeholder="Ingredientes : Ex: 03 Tomates..." th:field="*{ingredientes}"></textarea>
-=======
 	<div class="from-row">
   		<input type="file" class="custom-file-input" id="customFile">
   		<label class="custom-file-label" for="customFile">Choose file</label>
 	</div>
 
-  <div class="form-group"> 
+  <div class="form-group">
 		<label>Ingredientes :</label>
   	<textarea class="form-control" placeholder="Ingredientes : Ex: 03 Tomates..." th:field="*{ingredientes}" height="40px"></textarea>
->>>>>>> 1c4962235244ac20af2ec959ff0ea92f28aad8ad
   </div>
 
 
   <div class="form-group">
-<<<<<<< HEAD
-		<label for="inputEmail4">Modo de Preparo :</label>
-     <textarea class="form-control" id="modo" name="modo" placeholder="Modo de Preparo: Ex: Mexa os Igredientes..." th:field="*{modo}"></textarea>
-=======
 		<label>Modo de Preparo :</label>
      <textarea class="form-control" placeholder="Modo de Preparo: Ex: Mexa os Igredientes..." th:field="*{modo}" style="height: auto;"></textarea>
->>>>>>> 1c4962235244ac20af2ec959ff0ea92f28aad8ad
     </div>
 
 
@@ -221,12 +129,10 @@
       $(".txtb input").on("focus",function(){
         $(this).addClass("focus");
       });
-
       $(".txtb input").on("blur",function(){
         if($(this).val() == "")
         $(this).removeClass("focus");
       });
-
       </script>
 
 
