@@ -38,10 +38,6 @@ public class ControllerIndex {
     	 model.addAttribute("comidas", comida.findAll());
     	 return "index";
      }
-     @ModelAttribute("modo")
-     public List<Comidas> comidas() {
-         return comida.findAll();
-     }
 
  	@GetMapping("/cad")
  	public String home() {
@@ -53,12 +49,9 @@ public class ControllerIndex {
  	public String enviar(@Valid Comidas cmd,BindingResult result
  			, RedirectAttributes attributes) {
  				if (result.hasErrors()) {
-
  		}
  		attributes.addFlashAttribute("mensagem", "Receita salva com sucesso.");
  		comida.save(cmd);
-
-
  		return "redirect:/";
  	}
 
@@ -70,7 +63,7 @@ public class ControllerIndex {
 	}
 
 	@GetMapping("/editar/{id}")
-	public String editar(@PathVariable("id") Long id, Model model) {
+	public String editar(@PathVariable("id") Long id, Model model, RedirectAttributes attributes) {
 		model.addAttribute("comidas", comida.findById(id));
 		return "editar";
 
