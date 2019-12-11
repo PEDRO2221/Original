@@ -15,6 +15,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 import com.clj.monitoria.model.Comidas;
 import com.clj.monitoria.repository.ComidaBD;
+
 @Controller
 public class ControllerIndex {
 	@Autowired
@@ -22,10 +23,6 @@ public class ControllerIndex {
 
      @PreAuthorize("hasRole('ADMIN')")
 		 @GetMapping("/")
-
-
-     @GetMapping("/")
-
      public String Home(Model model) {
     	 model.addAttribute("comidas", comida.findAll());
     	 return "home";
