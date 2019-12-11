@@ -57,7 +57,7 @@
 
 
   <body>
-    <a href="/">Voltar</a>
+    <a href="/" id="a"><img src="back.png" height="20" width="20"></a>
 
       <form th:object ="${comidas}" method="GET" action="/cadastro"  class="login-form">
         <h1>EDITAR SUA RECEITA</h1>
@@ -102,10 +102,7 @@
 			  </div>
     </div>
 </div>
-	<div class="from-row">
-  		<input type="file" class="custom-file-input" id="customFile">
-  		<label class="custom-file-label" for="customFile">Choose file</label>
-	</div>
+
 
   <div class="form-group">
 		<label>Ingredientes :</label>
