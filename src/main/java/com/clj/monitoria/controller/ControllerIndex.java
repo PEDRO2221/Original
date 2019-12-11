@@ -63,7 +63,7 @@ public class ControllerIndex {
 	}
 
 	@GetMapping("/editar/{id}")
-	public String editar(@PathVariable("id") Long id, Model model) {
+	public String editar(@PathVariable("id") Long id, Model model , RedirectAttributes attributes) {
 		model.addAttribute("comidas", comida.findById(id));
 		return "editar";
 
