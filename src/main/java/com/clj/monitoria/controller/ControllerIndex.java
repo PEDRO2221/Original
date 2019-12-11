@@ -23,10 +23,10 @@ public class ControllerIndex {
 <<<<<<< HEAD
      @PreAuthorize("hasRole('ADMIN')")
 		 @GetMapping("/")
-=======
+
 
      @GetMapping("/")
->>>>>>> 1c4962235244ac20af2ec959ff0ea92f28aad8ad
+
      public String Home(Model model) {
     	 model.addAttribute("comidas", comida.findAll());
     	 return "home";
@@ -36,8 +36,8 @@ public class ControllerIndex {
     	 model.addAttribute("comidas", comida.findAll());
     	 return "receitas";
      }
-     
-     
+
+
      @GetMapping("/telInicial")
      public String user(Model model) {
     	 model.addAttribute("comidas", comida.findAll());
@@ -47,12 +47,12 @@ public class ControllerIndex {
      public List<Comidas> comidas() {
          return comida.findAll();
      }
-     
+
  	@GetMapping("/cad")
  	public String home() {
  		return "cadastro";
  	}
- 	
+
 
  	@GetMapping("/cadastro")
  	public String enviar(@Valid Comidas cmd,BindingResult result
@@ -62,8 +62,8 @@ public class ControllerIndex {
  		}
  		attributes.addFlashAttribute("mensagem", "Receita salva com sucesso.");
  		comida.save(cmd);
- 		
- 			
+
+
  		return "redirect:/";
  	}
 
