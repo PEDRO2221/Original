@@ -1,10 +1,14 @@
-
 <html xmlns="http://www.w3.org/1999/xhtml"
       xmlns:th="http://www.thymeleaf.org">
   <head>
     <meta charset="utf-8">
-    <title>Editar</title>
+    <title>Editar Receita</title>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" charset="utf-8"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  </head>
     <style media="screen">
+
     body{
       min-height: 100vh;
       background: linear-gradient(#e67e22,#d35400);
@@ -49,14 +53,7 @@
 	height: 50px;
 }
     </style>
-		<link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" charset="utf-8"></script>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-  </head>
-
-
-
-  <body>
+		  <body>
     <a href="/">Voltar</a>
 
       <form th:object ="${comidas}" method="GET" action="/cada"  class="login-form">
@@ -86,21 +83,20 @@
   <div class="form-group col-md-5">
 		<label>Tipo :</label>
 				<select class="form-control" th:field="*{tipo}">
-				  <option value="selecione">selecione</option>
-				  <option>Lanches</option>
-				  <option>Bebidas</option>
-				  <option>Massas</option>
-				  <option>Doces</option>
-				  <option>Sopas</option>
-				  <option>Saudável</option>
-				  <option>Frutos do mar</option>
-				  <option>Carnes</option>
-				  <option>Outro</option>
+				  <option>Tipo de Receita...</option>
+				  <option value="Lanches">Lanches</option>
+				  <option value="Bebidas">Bebidas</option>
+				  <option value="Massas">Massas</option>
+				  <option value="Doces">Doces</option>
+				  <option value="Sopas">Sopas</option>
+				  <option value="Saudável">Saudável</option>
+				  <option value="Frutos do mar">Frutos do mar</option>
+				  <option value="Carnes">Carnes</option>
+				  <option value="Outro">Outro</option>
 
 				</select>
 			  </div>
     </div>
-</div>
 
   <div class="form-group">
 		<label>Ingredientes :</label>
@@ -112,10 +108,6 @@
 		<label>Modo de Preparo :</label>
      <textarea class="form-control" placeholder="Modo de Preparo: Ex: Mexa os Igredientes..." th:field="*{modo}" style="height: auto;"></textarea>
     </div>
-
-
-    <div>
-  </div>
   <button type="submit" class="btn btn-primary">Enviar</button>
 </form>
 

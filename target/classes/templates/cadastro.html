@@ -90,7 +90,7 @@
   <body>
       <a href="/" id="a"><img src="back.png" height="20" width="20"></a>
 
-      <form action="/cada" class="login-form" method="GET">
+      <form action="/cada" class="login-form" method="GET" th:object="${comidas}">
         <h1>CRIE SUA RECEITA</h1>
 
   <div class="form-row">
@@ -117,15 +117,15 @@
   <div class="form-group col-md-10">
       <select class="form-control" id="tipo" name="tipo">
         <option>Tipo de Receita...</option>
-        <option>Lanches</option>
-        <option>Bebidas</option>
-        <option>Massas</option>
-        <option>Doces</option>
-        <option>Sopas</option>
-        <option>Saudável</option>
-        <option>Frutos do mar</option>
-        <option>Carnes</option>
-        <option>Outro</option>
+        <option value="Lanches">Lanches</option>
+        <option value="Bebidas">Bebidas</option>
+        <option value="Massas">Massas</option>
+        <option value="Doces">Doces</option>
+        <option value="Sopas">Sopas</option>
+        <option value="Saudável">Saudável</option>
+        <option value="Frutos do mar">Frutos do mar</option>
+        <option value="Carnes">Carnes</option>
+        <option value="Outro">Outro</option>
 
       </select>
     </div>
