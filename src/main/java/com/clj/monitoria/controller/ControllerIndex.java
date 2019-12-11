@@ -21,7 +21,6 @@ public class ControllerIndex {
 	@Autowired
 	ComidaBD comida;
 
-     @PreAuthorize("hasRole('ADMIN')")
 		 @GetMapping("/")
      public String Home(Model model) {
     	 model.addAttribute("comidas", comida.findAll());
