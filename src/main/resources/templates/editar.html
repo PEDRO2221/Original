@@ -3,7 +3,7 @@
       xmlns:th="http://www.thymeleaf.org">
   <head>
     <meta charset="utf-8">
-    <title>Editar</title>
+    <title>Editar Receita</title>
     <style media="screen">
     body{
       min-height: 100vh;
@@ -87,15 +87,15 @@
 		<label>Tipo :</label>
 				<select class="form-control" th:field="*{tipo}">
 				  <option>Tipo de Receita...</option>
-				  <option>Lanches</option>
-				  <option>Bebidas</option>
-				  <option>Massas</option>
-				  <option>Doces</option>
-				  <option>Sopas</option>
-				  <option>Saudável</option>
-				  <option>Frutos do mar</option>
-				  <option>Carnes</option>
-				  <option>Outro</option>
+				  <option value="Lanches">Lanches</option>
+				  <option value="Bebidas">Bebidas</option>
+				  <option value="Massas">Massas</option>
+				  <option value="Doces">Doces</option>
+				  <option value="Sopas">Sopas</option>
+				  <option value="Saudável">Saudável</option>
+				  <option value="Frutos do mar">Frutos do mar</option>
+				  <option value="Carnes">Carnes</option>
+				  <option value="Outro">Outro</option>
 
 				</select>
 			  </div>
