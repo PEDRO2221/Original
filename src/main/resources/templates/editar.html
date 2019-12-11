@@ -86,8 +86,7 @@
   <div class="form-group col-md-5">
 		<label>Tipo :</label>
 				<select class="form-control" th:field="*{tipo}">
-				  <option selected="selected"  th:object="p: ${comidas}"
-                        th:value="${p.tipo}" th:text="${p.tipo}" th:field="*{tipo}"></option>
+				  <option value="selecione">selecione</option>
 				  <option>Lanches</option>
 				  <option>Bebidas</option>
 				  <option>Massas</option>
