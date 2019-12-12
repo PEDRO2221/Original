@@ -56,7 +56,7 @@
 		  <body>
     <a href="/">Voltar</a>
 
-      <form th:object="{comidas}" method="GET" action="/cada"  class="login-form">
+      <form th:object="${comidas}" method="GET" action="/cada"  class="login-form">
         <h1>EDITAR SUA RECEITA</h1>
 
   <div class="form-row">
@@ -83,7 +83,7 @@
   <div class="form-group col-md-5">
 		<label>Tipo :</label>
 				<select class="form-control" th:field="*{tipo}" select="selected">
-				  <option value="">Tipo de Receita...</option>
+				  <option>Tipo de Receita...</option>
 				  <option>Lanches</option>
 				  <option>Bebidas</option>
 				  <option>Massas</option>
